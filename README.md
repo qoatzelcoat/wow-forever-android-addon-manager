@@ -24,21 +24,7 @@ This repository is project documentation, not an addon distribution platform. Be
 
 ## Website
 
-Intended address: https://addons.z3dlabs.id. Deployment is not yet verified.
+https://addons.z3dlabs.id. Deployment is not yet verified.
 
-The page in `site/` is plain HTML and CSS, with no JavaScript, dependencies, API calls, analytics, or build step. To view locally, run `python3 -m http.server 8001 --bind 127.0.0.1 --directory site` from the repository root and open the local server in a browser.
-
-### Cloudflare Pages setup
-
-1. Create or reuse the public GitHub repository `qoatzelcoat/wow-forever-android-addon-manager`, with description `A personal addon manager project for WoW Forever on Android.` Do not add a license, workflows, templates, or a second README. Push these files to `main` using the initial commit message `Initial project documentation and landing page`.
-2. In Cloudflare, inspect the existing `z3dlabs.id` zone, its nameservers and DNS records, and Workers & Pages custom domains. Check specifically for an existing `addons` record or assignment. Reuse an existing project only if it belongs to this site; resolve any conflict before proceeding. Do not change the apex domain or the existing main-site project.
-3. In Workers & Pages, choose **Create application → Pages → Connect to Git** (wording may vary). Authorize only the required GitHub repository and select it. Use project name `wow-forever-android-addon-manager`, production branch `main`, framework preset **None**, no build command, output directory `site`, and repository root `/`. No environment variables are required.
-4. Stop before **Save and Deploy** until production publishing is confirmed. Once confirmed, deploy and check the assigned `pages.dev` address for the correct content and stylesheet.
-5. In the Pages project's **Custom domains**, choose **Set up a custom domain** and enter `addons.z3dlabs.id`. Stop before activating the domain or changing DNS until confirmed. If the zone is in the same Cloudflare account, review the proposed `addons` CNAME to the project's assigned `pages.dev` hostname. If DNS is hosted elsewhere, follow Pages' displayed verification and CNAME instructions there. Do not overwrite an existing record without resolving ownership and purpose.
-6. Wait for domain validation and TLS activation. Verify https://addons.z3dlabs.id serves this page and `style.css`, and that https://z3dlabs.id remains unchanged. Only then mark production deployment verified here.
-
-Network restrictions prevented review of the live parent website and official CurseForge terms during initial preparation. Styling was matched to the available parent source repository. Live comparison, current terms review, DNS inspection, GitHub publication, and deployment verification remain pending.
-
----
 
 An independent, non-commercial project. Not affiliated with Blizzard Entertainment, CurseForge, or Overwolf.
